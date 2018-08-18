@@ -16,7 +16,8 @@ public class ApacheKafkaWebController {
 	KafkaSender kafkaSender;
 
 	//@GetMapping(value = "/producer")
-	@GetMapping(value = "/consumer")
+	//@GetMapping(value = "/consumer")
+	@GetMapping(value = "/producerconsumer")
 	public String producer(@RequestParam("message") String message) {
 		kafkaSender.send(message);
 
