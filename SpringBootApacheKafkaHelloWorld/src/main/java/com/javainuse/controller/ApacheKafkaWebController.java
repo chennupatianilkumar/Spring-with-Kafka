@@ -15,11 +15,13 @@ public class ApacheKafkaWebController {
 	@Autowired
 	KafkaSender kafkaSender;
 
-	@GetMapping(value = "/producer")
+	//@GetMapping(value = "/producer")
+	@GetMapping(value = "/consumer")
 	public String producer(@RequestParam("message") String message) {
 		kafkaSender.send(message);
 
 		return "Message sent to the Kafka Topic java in use topic Successfully delivered the message";
+		//System.out.println("Hello World!!");
 	}
 
 	
